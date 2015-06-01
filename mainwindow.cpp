@@ -100,7 +100,7 @@ void MainWindow::on_actionGerman_triggered()
 
 void MainWindow::on_actionSearch_for_updates_triggered()
 {
-    system("start powershell.exe Invoke-WebRequest 'http://p-devs.info/OPO/OPOT.zip' -OutFile $pwd'\Desktop\OPOT.zip'");
+    system("start powershell.exe Invoke-WebRequest 'http://p-devs.info/OPO/OPOT.zip' -OutFile $pwd'\\Desktop\\OPOT.zip'");
 }
 
 void MainWindow::on_root_clicked()
