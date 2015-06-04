@@ -83,8 +83,7 @@ void MainWindow::on_backup_clicked()
 }
 void MainWindow::on_actionGerman_triggered()
 {
-    //mainwindowger.show();
-
+    loadLanguage("de_DE");
 }
 
 
@@ -114,4 +113,52 @@ void MainWindow::on_flashrom_clicked()
 
     system("fastboot flash recovery "+*char_data);
     system("fastboot reboot");
+}
+
+void MainWindow::on_actionEnglish_triggered()
+{
+    loadLanguage("en_EN");
+}
+
+/**
+ * \brief Language loader
+ * \param newLanguage Language string, usually in POSIX locale format
+ *
+ */
+void MainWindow::loadLanguage(const QString &newLanguage)
+{
+    if(currentLanguage != newLanguage)
+    {
+        currentLanguage = newLanguage;
+        QLocale locale = QLocale(currentLanguage);
+        QLocale::setDefault(locale);
+
+        // Remove old translator
+        qApp->removeTranslator(&translator);
+
+        // Load only, if translation does exist
+        if(translator.load(QString(":/translations/OPOT_%1.qm").arg(currentLanguage)))
+            qApp->installTranslator(&translator);
+    }
+}
+
+/**
+ * \brief Overwritten event handler
+ * \param event QEvent
+ *
+ */
+void MainWindow::changeEvent(QEvent* event)
+{
+    if(0 != event)
+    {
+        switch(event->type())
+        {
+            // Triggered, if a translator is loaded
+            case QEvent::LanguageChange:
+            ui->retranslateUi(this);
+            break;
+        }
+    }
+
+    QMainWindow::changeEvent(event);
 }

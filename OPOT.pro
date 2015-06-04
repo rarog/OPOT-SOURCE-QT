@@ -23,3 +23,6 @@ TRANSLATIONS += translations/OPOT_de_DE.ts
 
 DISTFILES += \
     translations/OPOT_de_DE.ts
+
+RESOURCES += \
+    res.qrc
