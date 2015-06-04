@@ -44,16 +44,6 @@ void MainWindow::on_devices_clicked()
     system("start cmd.exe /k adb devices");
 }
 
-void MainWindow::on_forumlink_linkActivated(const QString &link)
-{
-    system("explorer.exe https://forums.oneplus.net/threads/oneplus-one-toolkit-new.311774/");
-}
-
-void MainWindow::on_websitelink_linkActivated(const QString &link)
-{
-    system("explorer.exe http://p-devs.info/");
-}
-
 void MainWindow::on_oemunlock_clicked()
 {
       if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Warning", "This will delete all files on your device. Are you sure you want to continue?", QMessageBox::Yes|QMessageBox::No).exec())

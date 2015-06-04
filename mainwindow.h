@@ -27,10 +27,6 @@ private slots:
 
     void on_devices_clicked();
 
-    void on_forumlink_linkActivated(const QString &link);
-
-    void on_websitelink_linkActivated(const QString &link);
-
     void on_oemunlock_clicked();
 
     void on_backup_clicked();
