@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>OPOT_1.0.9</string>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
