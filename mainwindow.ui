@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string/>
     </property>
     <widget class="QPushButton" name="fastboot">
      <property name="geometry">
