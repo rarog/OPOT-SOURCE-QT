@@ -3,6 +3,7 @@
 
 //#include "mainwindowger.h"
 #include <QMainWindow>
+#include <QTranslator>
 
 namespace Ui {
 class MainWindow;
@@ -27,10 +28,6 @@ private slots:
 
     void on_devices_clicked();
 
-    void on_forumlink_linkActivated(const QString &link);
-
-    void on_websitelink_linkActivated(const QString &link);
-
     void on_oemunlock_clicked();
 
     void on_backup_clicked();
@@ -43,10 +40,17 @@ private slots:
 
     void on_flashrom_clicked();
 
+    void on_actionEnglish_triggered();
+
 private:
     Ui::MainWindow *ui;
-   // MainWindowGer mainwindowger;
+    QString currentLanguage;
+    QTranslator translator;
 
+    void loadLanguage(const QString &newLanguage);
+
+protected:
+    void changeEvent(QEvent*);
 };
 
 #endif // MAINWINDOW_H

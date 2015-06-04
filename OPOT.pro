@@ -18,3 +18,11 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+TRANSLATIONS += translations/OPOT_de_DE.ts
+
+DISTFILES += \
+    translations/OPOT_de_DE.ts
+
+RESOURCES += \
+    res.qrc
