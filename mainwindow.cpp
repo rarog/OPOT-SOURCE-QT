@@ -153,9 +153,11 @@ void MainWindow::changeEvent(QEvent* event)
     {
         switch(event->type())
         {
-            // Triggered, if a translator is loaded
-            case QEvent::LanguageChange:
+        // Triggered, if a translator is loaded
+        case QEvent::LanguageChange:
             ui->retranslateUi(this);
+            break;
+        default:
             break;
         }
     }
