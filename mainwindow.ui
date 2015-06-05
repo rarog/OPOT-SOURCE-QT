@@ -40,7 +40,7 @@
       <number>5</number>
      </property>
      <item row="3" column="0">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="labelFootnote">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -56,7 +56,7 @@
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="labelDisclaimer">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -80,7 +80,7 @@
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QWidget" name="horizontalWidget_Links" native="true">
+      <widget class="QWidget" name="horizontalWidgetLinks" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -89,7 +89,7 @@
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QLabel" name="forumlink">
+         <widget class="QLabel" name="labelForumLink">
           <property name="palette">
            <palette>
             <active>
@@ -517,7 +517,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="websitelink">
+         <widget class="QLabel" name="labelWebsiteLink">
           <property name="palette">
            <palette>
             <active>
