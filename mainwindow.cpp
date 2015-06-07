@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    // Try to translate the GUI to the current system locale
+    loadLanguage(QLocale::system().name());
 }
 
 
