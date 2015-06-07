@@ -19,22 +19,30 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_fastboot_clicked()
 {
-    system("adb reboot fastboot");
+    QStringList commands;
+    commands << QString("adb reboot fastboot");
+    executeCommands(commands);
 }
 
 void MainWindow::on_reboot_clicked()
 {
-    system("adb reboot");
+    QStringList commands;
+    commands << QString("adb reboot");
+    executeCommands(commands);
 }
 
 void MainWindow::on_recovery_clicked()
 {
-    system("adb reboot recovery");
+    QStringList commands;
+    commands << QString("adb reboot recovery");
+    executeCommands(commands);
 }
 
 void MainWindow::on_rebootfastboot_clicked()
 {
-    system("fastboot reboot");
+    QStringList commands;
+    commands << QString("fastboot reboot");
+    executeCommands(commands);
 }
 
 void MainWindow::on_devices_clicked()
@@ -63,10 +71,12 @@ const char *QString2char(QString str)
 }
 void MainWindow::on_backup_clicked()
 {
+    QStringList commands;
     if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Attention", "Do you want to make a file-only backup? This will copy all files from your device to the computer. By pressing 'NO' the tool will make a normal backup.", QMessageBox::Yes|QMessageBox::No).exec())
-          {
-          system("adb pull /sdcard/0 /backup");
-          }
+    {
+        commands << QString("adb pull /sdcard/0 /backup");
+        executeCommands(commands);
+    }
 
     QString filename = QFileDialog::getSaveFileName(
                 this,
@@ -75,11 +85,9 @@ void MainWindow::on_backup_clicked()
                 "Backup file (*.ab)"
                 );
 
-    const char *char_data;
-    char_data = QString2char(filename);
-
-    system("start cmd.exe /k adb backup -all -apk -shared -f "+ *char_data);
-
+    commands.clear();
+    commands << QString("adb backup -all -apk -shared -f ") + filename;
+    executeCommands(commands);
 }
 void MainWindow::on_actionGerman_triggered()
 {
