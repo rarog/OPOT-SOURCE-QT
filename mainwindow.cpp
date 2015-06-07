@@ -86,16 +86,22 @@ void MainWindow::on_actionGerman_triggered()
     loadLanguage("de_DE");
 }
 
-
 void MainWindow::on_actionSearch_for_updates_triggered()
 {
+    // TODO: current code isn't updating, it just tries to download a plattform indifferent file to desktop
+    //  windows style. Following questions should be resolved:
+    //  - should there be a differentiation between packages for different plattforms?
+    //  - will there be a server script which would deliver an URL depending on submittet current version?
+    //  - is an automatic download needed at all or would it be enough to just open the download page?
+    //  If a download will still be necessary, something like this could be used: https://wiki.qt.io/Download_Data_from_URL
+    #pragma message("TODO: MainWindow::on_actionSearch_for_updates_triggered needs reconception and rewrite")
     system("start powershell.exe Invoke-WebRequest 'http://p-devs.info/OPO/OPOT.zip' -OutFile $pwd'\\Desktop\\OPOT.zip'");
 }
 
 void MainWindow::on_root_clicked()
 {    
     QStringList commands;
-    // TODO, this should be determined dynamically via path search. Else a recompilation is needed for every new version.
+    // TODO: this should be determined dynamically via path search. Else a recompilation is needed for every new version.
     commands << QString("adb sideload SuperSUv2.46.zip");
     executeCommands(commands);
 }
