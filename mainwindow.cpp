@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QProcess>
+#include <QStandardPaths>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -81,7 +82,7 @@ void MainWindow::on_backup_clicked()
     QString filename = QFileDialog::getSaveFileName(
                 this,
                 tr("Save file"),
-                "C://",
+                QStandardPaths::writableLocation(QStandardPaths::DesktopLocation),
                 tr("Backup file (*.ab)")
                 );
 
