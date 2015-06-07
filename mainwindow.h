@@ -1,7 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-//#include "mainwindowger.h"
 #include <QMainWindow>
 #include <QTranslator>
 
@@ -48,6 +47,7 @@ private:
     QTranslator translator;
 
     void loadLanguage(const QString &newLanguage);
+    bool executeCommands(const QStringList &commands);
 
 protected:
     void changeEvent(QEvent*);

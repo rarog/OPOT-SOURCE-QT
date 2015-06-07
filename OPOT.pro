@@ -26,3 +26,5 @@ DISTFILES += \
 
 RESOURCES += \
     res.qrc
+
+CONFIG += c++11
