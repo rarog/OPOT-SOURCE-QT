@@ -47,6 +47,7 @@ private:
     QTranslator translator;
 
     void loadLanguage(const QString &newLanguage);
+    bool executeCommands(const QStringList &commands);
 
 protected:
     void changeEvent(QEvent*);

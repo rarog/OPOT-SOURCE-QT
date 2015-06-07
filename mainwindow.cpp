@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QProcess>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -38,7 +39,9 @@ void MainWindow::on_rebootfastboot_clicked()
 
 void MainWindow::on_devices_clicked()
 {
-    system("start cmd.exe /k adb devices");
+    QStringList commands;
+    commands << QString("adb devices");
+    executeCommands(commands);
 }
 
 void MainWindow::on_oemunlock_clicked()
@@ -160,4 +163,28 @@ void MainWindow::changeEvent(QEvent* event)
     }
 
     QMainWindow::changeEvent(event);
+}
+
+/**
+ * \brief Executes list of commands via QProcess. Stops on first error.
+ * \param commands List of commands
+ * \return Indicator if all commands were executed.
+ */
+bool MainWindow::executeCommands(const QStringList &commands)
+{
+    QProcess singleProcess;
+
+    for (QString command : commands)
+    {
+        singleProcess.start(command);
+
+        if (!singleProcess.waitForStarted())
+            return false;
+
+        while(singleProcess.state() != QProcess::NotRunning){
+            singleProcess.waitForReadyRead();
+            ui->plainTextEditConsoleOutput->setPlainText(ui->plainTextEditConsoleOutput->toPlainText() + QString(singleProcess.readAll()));
+        }
+    }
+    return true;
 }
