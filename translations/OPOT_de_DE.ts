@@ -121,12 +121,27 @@
         <translation>Nach Updates suchen...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="73"/>
+        <location filename="../mainwindow.cpp" line="75"/>
+        <source>Attention</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="75"/>
+        <source>Do you want to make a file-only backup? This will copy all files from your device to the computer. By pressing &apos;NO&apos; the tool will make a normal backup.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="83"/>
         <source>Save file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="106"/>
+        <location filename="../mainwindow.cpp" line="85"/>
+        <source>Backup file (*.ab)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="121"/>
         <source>Open .ZIP</source>
         <translation type="unfinished"></translation>
     </message>

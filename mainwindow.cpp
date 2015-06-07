@@ -72,7 +72,7 @@ const char *QString2char(QString str)
 void MainWindow::on_backup_clicked()
 {
     QStringList commands;
-    if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Attention", "Do you want to make a file-only backup? This will copy all files from your device to the computer. By pressing 'NO' the tool will make a normal backup.", QMessageBox::Yes|QMessageBox::No).exec())
+    if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, tr("Attention"), tr("Do you want to make a file-only backup? This will copy all files from your device to the computer. By pressing 'NO' the tool will make a normal backup."), QMessageBox::Yes|QMessageBox::No).exec())
     {
         commands << QString("adb pull /sdcard/0 /backup");
         executeCommands(commands);
@@ -82,7 +82,7 @@ void MainWindow::on_backup_clicked()
                 this,
                 tr("Save file"),
                 "C://",
-                "Backup file (*.ab)"
+                tr("Backup file (*.ab)")
                 );
 
     commands.clear();
