@@ -93,10 +93,11 @@ void MainWindow::on_actionSearch_for_updates_triggered()
 }
 
 void MainWindow::on_root_clicked()
-{
-    system("adb reboot fastboot");
-    system("fastboot flash recovery SuperSUv2.46.zip");
-    system("fastboot reboot");
+{    
+    QStringList commands;
+    // TODO, this should be determined dynamically via path search. Else a recompilation is needed for every new version.
+    commands << QString("adb sideload SuperSUv2.46.zip");
+    executeCommands(commands);
 }
 
 void MainWindow::on_flashrom_clicked()
