@@ -58,10 +58,12 @@ void MainWindow::on_devices_clicked()
 
 void MainWindow::on_oemunlock_clicked()
 {
-      if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Warning", "This will delete all files on your device. Are you sure you want to continue?", QMessageBox::Yes|QMessageBox::No).exec())
-      {
-      system("fastboot oem unlock");
-      }
+    QStringList commands;
+    if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, tr("Warning"), tr("This will delete all files on your device. Are you sure you want to continue?"), QMessageBox::Yes|QMessageBox::No).exec())
+    {
+        commands << QString("fastboot oem unlock");
+        executeCommands(commands);
+    }
 }
 
 void MainWindow::on_backup_clicked()
