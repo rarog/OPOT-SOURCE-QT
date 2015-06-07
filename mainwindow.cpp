@@ -193,6 +193,11 @@ bool MainWindow::executeCommands(const QStringList &commands)
 {
     QProcess singleProcess;
 
+    if (ui->checkBoxClearOutput->isChecked())
+        ui->plainTextEditConsoleOutput->clear();
+    else if (ui->plainTextEditConsoleOutput->toPlainText().length() > 0)
+        ui->plainTextEditConsoleOutput->setPlainText(ui->plainTextEditConsoleOutput->toPlainText() + QString("----------\n"));
+
     for (QString command : commands)
     {
         singleProcess.start(command);
