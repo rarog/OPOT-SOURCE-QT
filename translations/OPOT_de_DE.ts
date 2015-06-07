@@ -126,28 +126,33 @@
         <translation>Nach Updates suchen...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="79"/>
+        <location filename="../mainwindow.cpp" line="70"/>
         <source>Attention</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="79"/>
+        <location filename="../mainwindow.cpp" line="70"/>
         <source>Do you want to make a file-only backup? This will copy all files from your device to the computer. By pressing &apos;NO&apos; the tool will make a normal backup.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="87"/>
+        <location filename="../mainwindow.cpp" line="78"/>
         <source>Save file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="89"/>
+        <location filename="../mainwindow.cpp" line="80"/>
         <source>Backup file (*.ab)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="125"/>
-        <source>Open .ZIP</source>
+        <location filename="../mainwindow.cpp" line="120"/>
+        <source>Open .IMG</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="122"/>
+        <source>Recovery Image (*.img)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

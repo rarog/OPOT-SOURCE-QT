@@ -63,16 +63,7 @@ void MainWindow::on_oemunlock_clicked()
       system("fastboot oem unlock");
       }
 }
-const char *QString2char(QString str)
-{
-    QByteArray byteArray;
-    const char *cstr;
 
-    byteArray = str.toUtf8();
-    cstr = byteArray.constData();
-
-    return(cstr);
-}
 void MainWindow::on_backup_clicked()
 {
     QStringList commands;
@@ -111,7 +102,7 @@ void MainWindow::on_actionSearch_for_updates_triggered()
 }
 
 void MainWindow::on_root_clicked()
-{    
+{
     QStringList commands;
     // TODO: this should be determined dynamically via path search. Else a recompilation is needed for every new version.
     commands << QString("adb sideload SuperSUv2.46.zip");
@@ -120,18 +111,20 @@ void MainWindow::on_root_clicked()
 
 void MainWindow::on_flashrom_clicked()
 {
+    QStringList commands;
+    // TODO: this is not flashing full ROM but recovery. To be renamed. Correct function for flashing full ROM has to be added.
+    #pragma message("TODO: MainWindow::on_flashrom_clicked needs to be renamed and true flashrom function to be made")
+
     QString filename = QFileDialog::getOpenFileName(
                 this,
-                tr("Open .ZIP"),
-                "C://",
-                "ROM (*.zip)"
+                tr("Open .IMG"),
+                QStandardPaths::writableLocation(QStandardPaths::DesktopLocation),
+                tr("Recovery Image (*.img)")
                 );
 
-    const char *char_data;
-    char_data = QString2char(filename);
-
-    system("fastboot flash recovery "+*char_data);
-    system("fastboot reboot");
+    commands << QString("fastboot flash recovery "+filename)
+             << QString("fastboot reboot");
+    executeCommands(commands);
 }
 
 void MainWindow::on_actionEnglish_triggered()
