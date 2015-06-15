@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>OPOT_1.0.9</string>
+   <string notr="true">OPOT v%1</string>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
