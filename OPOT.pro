@@ -13,11 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    fileoverview.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    fileoverview.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    fileoverview.ui
 
 TRANSLATIONS += translations/OPOT_de_DE.ts
 
