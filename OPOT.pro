@@ -13,14 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    fileoverview.cpp
+        mainwindow.cpp
 
-HEADERS  += mainwindow.h \
-    fileoverview.h
+HEADERS  += mainwindow.h
 
-FORMS    += mainwindow.ui \
-    fileoverview.ui
+FORMS    += mainwindow.ui
 
 TRANSLATIONS += translations/OPOT_de_DE.ts
 
@@ -31,3 +28,6 @@ RESOURCES += \
     res.qrc
 
 CONFIG += c++11
+
+VERSION = 1.1.0
+DEFINES += APP_VERSION_STRING=\\\"1.1.0\\\"

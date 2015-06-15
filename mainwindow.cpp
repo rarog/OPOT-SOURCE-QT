@@ -11,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // Setting main window title to include version.
+    setWindowTitle(windowTitle().arg(QApplication::applicationVersion()));
+
     // Try to translate the GUI to the current system locale
     loadLanguage(QLocale::system().name());
 }
