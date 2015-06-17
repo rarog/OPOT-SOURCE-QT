@@ -34,22 +34,22 @@
         <translation>Sicherung wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="202"/>
+        <location filename="../mainwindow.ui" line="1193"/>
         <source>Flash ROM*</source>
         <translation>Betriebssystem installieren*</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="202"/>
         <source>Reboot [Fastboot]</source>
         <translation>Aus Fastboot Modus neustarten</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="222"/>
+        <location filename="../mainwindow.ui" line="212"/>
         <source>Device list</source>
         <translation>Geräteliste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="235"/>
+        <location filename="../mainwindow.ui" line="225"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
@@ -71,92 +71,97 @@
         <translation>*Um ein neues Betriebssystem zu installieren muss der Bootloader entsperrt sein.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="672"/>
+        <location filename="../mainwindow.ui" line="244"/>
+        <source>Flash Recovery*</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="684"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://forums.oneplus.net/threads/oneplus-one-toolkit-new.311774/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;OnePlus One Forum&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1100"/>
+        <location filename="../mainwindow.ui" line="1112"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.p-devs.info/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Developer website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1127"/>
+        <location filename="../mainwindow.ui" line="1139"/>
         <source>Language</source>
         <translation>Sprache</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1134"/>
+        <location filename="../mainwindow.ui" line="1146"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1141"/>
+        <location filename="../mainwindow.ui" line="1153"/>
         <source>Update</source>
         <translation>Update</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1156"/>
+        <location filename="../mainwindow.ui" line="1168"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1161"/>
+        <location filename="../mainwindow.ui" line="1173"/>
         <source>English</source>
         <translation>Englisch</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1166"/>
+        <location filename="../mainwindow.ui" line="1178"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1171"/>
+        <location filename="../mainwindow.ui" line="1183"/>
         <source>Feedback</source>
         <translation>Feedback</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1176"/>
+        <location filename="../mainwindow.ui" line="1188"/>
         <source>Download newest version to Desktop</source>
         <translation>Nach Updates suchen...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="65"/>
+        <location filename="../mainwindow.cpp" line="68"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="65"/>
+        <location filename="../mainwindow.cpp" line="68"/>
         <source>This will delete all files on your device. Are you sure you want to continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="75"/>
+        <location filename="../mainwindow.cpp" line="78"/>
         <source>Attention</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="75"/>
+        <location filename="../mainwindow.cpp" line="78"/>
         <source>Do you want to make a file-only backup? This will copy all files from your device to the computer. By pressing &apos;NO&apos; the tool will make a normal backup.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="83"/>
+        <location filename="../mainwindow.cpp" line="86"/>
         <source>Save file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="85"/>
+        <location filename="../mainwindow.cpp" line="88"/>
         <source>Backup file (*.ab)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="125"/>
-        <source>Open .IMG</source>
+        <location filename="../mainwindow.cpp" line="126"/>
+        <source>Open .img</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="127"/>
+        <location filename="../mainwindow.cpp" line="128"/>
         <source>Recovery Image (*.img)</source>
         <translation type="unfinished"></translation>
     </message>

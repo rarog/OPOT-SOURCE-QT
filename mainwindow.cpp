@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // Setting main window title to include version.
     setWindowTitle(windowTitle().arg(QApplication::applicationVersion()));
 
+    // Adding context menu actions
+    ui->buttonFlashRecovery->addAction(ui->actionFlashRom);
+
     // Try to translate the GUI to the current system locale
     loadLanguage(QLocale::system().name());
 }
@@ -114,15 +117,13 @@ void MainWindow::on_root_clicked()
     executeCommands(commands);
 }
 
-void MainWindow::on_flashrom_clicked()
+void MainWindow::on_buttonFlashRecovery_clicked()
 {
     QStringList commands;
-    // TODO: this is not flashing full ROM but recovery. To be renamed. Correct function for flashing full ROM has to be added.
-    #pragma message("TODO: MainWindow::on_flashrom_clicked needs to be renamed and true flashrom function to be made")
 
     QString filename = QFileDialog::getOpenFileName(
                 this,
-                tr("Open .IMG"),
+                tr("Open .img"),
                 QStandardPaths::writableLocation(QStandardPaths::DesktopLocation),
                 tr("Recovery Image (*.img)")
                 );
@@ -209,4 +210,9 @@ bool MainWindow::executeCommands(const QStringList &commands)
         }
     }
     return true;
+}
+
+void MainWindow::on_actionFlashRom_triggered()
+{
+    // TODO: Add ROM flashing functionality
 }

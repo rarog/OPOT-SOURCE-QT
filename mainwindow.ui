@@ -193,16 +193,6 @@ color: rgb(255, 255, 255);</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="0">
-         <widget class="QPushButton" name="flashrom">
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="text">
-           <string>Flash ROM*</string>
-          </property>
-         </widget>
-        </item>
         <item row="3" column="1">
          <widget class="QPushButton" name="rebootfastboot">
           <property name="cursor">
@@ -233,6 +223,28 @@ color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>Root</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QToolButton" name="buttonFlashRecovery">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>Flash Recovery*</string>
+          </property>
+          <property name="popupMode">
+           <enum>QToolButton::MenuButtonPopup</enum>
           </property>
          </widget>
         </item>
@@ -1174,6 +1186,11 @@ color: rgb(255, 255, 255);</string>
   <action name="actionSearch_for_updates">
    <property name="text">
     <string>Download newest version to Desktop</string>
+   </property>
+  </action>
+  <action name="actionFlashRom">
+   <property name="text">
+    <string>Flash ROM*</string>
    </property>
   </action>
  </widget>

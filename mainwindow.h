@@ -37,9 +37,11 @@ private slots:
 
     void on_root_clicked();
 
-    void on_flashrom_clicked();
+    void on_buttonFlashRecovery_clicked();
 
     void on_actionEnglish_triggered();
+
+    void on_actionFlashRom_triggered();
 
 private:
     Ui::MainWindow *ui;
